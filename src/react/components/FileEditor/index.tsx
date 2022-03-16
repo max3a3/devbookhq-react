@@ -2,10 +2,10 @@ import {
   useEffect,
   useCallback,
 } from 'react'
-
 import type {
   useDevbook,
 } from '@devbookhq/sdk'
+
 import Editor from '../Editor'
 import { Language } from '../Editor/language'
 

@@ -3,6 +3,7 @@ import {
   memo,
   useLayoutEffect,
 } from 'react'
+import { EditorView } from '@codemirror/view'
 
 import {
   Language,
@@ -10,7 +11,6 @@ import {
 import Header from './Header'
 import Separator from '../Separator'
 import createEditorState from './createEditorState'
-import { EditorView } from '@codemirror/view'
 
 export interface Props {
   initialContent?: string

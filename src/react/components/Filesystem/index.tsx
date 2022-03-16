@@ -15,7 +15,6 @@ import Splitter, { SplitDirection } from '@devbookhq/splitter'
 
 import Header from '../Editor/Header'
 import Separator from '../Separator'
-
 import createEditorState from '../Editor/createEditorState'
 import { Language } from '../Editor/language'
 import FileExplorer from './FileExplorer'

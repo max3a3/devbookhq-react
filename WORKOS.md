@@ -45,6 +45,10 @@ WORKOS_CLIENT_ID='client_01FZ8YZX2TZE03FXAJ7R7VP6C2'
 WORKOS_CALLBACK='<redirect address from the ngrok logs>'" > .env
 ```
 
+Add the redirect URI to the WorkOS dashbord redirect URIs as default -- https://dashboard.workos.com/environment_01FZ8YZX2B5S005PRE9BRNYSV8/configuration
+
+> You may be in another organization - the URI setup is in the "Configuration section" of dashboard.
+
 Start the WorkOS server with the credentials
 ```
 npm run start &

@@ -15,40 +15,30 @@ import {
 
 function Examples({ theme }: { theme: 'dark' | 'light' }) {
   const devbook = useDevbook({
-    env: 'your-vm-id',
+    env: 'workos',
     debug: true,
     config: {
-      domain: 'shared.usedevbook.com',
+      domain: 'dev.usedevbook.com',
     },
   })
 
   const terminalRef = useRef<TerminalHandler>(null)
 
-  function runEcho() {
-    if (devbook.status !== DevbookStatus.Connected) return
-    if (!terminalRef.current) return
-
-    terminalRef.current.handleInput('echo Hello\n')
-    terminalRef.current.focus()
-  }
-
   return (
-    <div className="space-y-2 w-[750px]">
+    <div className="space-y-2 w-[1250px]">
       <Terminal
         autofocus
-        onStart={(handler) => {
-          handler.handleInput('echo Started\n')
-        }}
         ref={terminalRef}
         lightTheme={theme === 'light'}
         devbook={devbook}
-        height="500px"
+        height="600px"
       />
       <Filesystem
         devbook={devbook}
         lightTheme={theme === 'light'}
+        height="600px"
       />
-      <Editor
+      {/* <Editor
         isReadonly={false}
         lightTheme={theme === 'light'}
         language={Language.jsx}
@@ -64,7 +54,7 @@ function Examples({ theme }: { theme: 'dark' | 'light' }) {
         lightTheme={theme === 'light'}
         stdout={['out1', 'out2']}
         stderr={['err1']}
-      />
+      /> */}
     </div>
   );
 }

@@ -17,6 +17,7 @@ function Examples({ theme }: { theme: 'dark' | 'light' }) {
   const devbook = useDevbook({
     env: 'workos',
     debug: true,
+    __debug__idleTime: 9999999999,
     config: {
       domain: 'dev.usedevbook.com',
     },

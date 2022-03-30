@@ -22,7 +22,7 @@ Install ngrok
 curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz -o ngrok.tar && tar xvzf ngrok.tar
 ```
 
-Setup ngrok
+Setup ngrok - your token can be found here - https://dashboard.ngrok.com/get-started/setup
 ```
 ./ngrok authtoken <ngrok auth token>
 ```
